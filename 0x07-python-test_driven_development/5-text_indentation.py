@@ -1,30 +1,25 @@
 #!/usr/bin/python3
-""" function that prints a text with new lines """
+"""
+This is the "5-test_indentation" module.
+The 5-text_indentation module supplies one function, text_indentation(text).
+"""
 
 
 def text_indentation(text):
-    """ After each . ? and : print 2 new lines
-    Args:
-        text: the wall of text that we are given
-    Return: none, just print
-    """
-    last = " "
-    string = ""
-    if text is "":
-        print(string, end='')
+    """splits a text into lines along "?", ":", "." followed by 2 new lines"""
     if type(text) is not str:
         raise TypeError("text must be a string")
-    for i in text:
-        if i is last and i is ' ':
-            last = i
-            continue
-        if (last is '.' or last is '?' or last is ':') and i is ' ':
-            last = i
-            continue
-        if i is '.' or i is '?' or i is ':':
-            string += i + "\n" + "\n"
-            last = i
-        else:
-            string += i
-            last = i
-    print(string.rstrip(' '), end="")
+    flag = 0
+    for a in text:
+        if flag == 0:
+            if a == ' ':
+                continue
+            else:
+                flag = 1
+        if flag == 1:
+            if a == '?' or a == '.' or a == ':':
+                print(a)
+                print()
+                flag = 0
+            else:
+                print(a, end="")
