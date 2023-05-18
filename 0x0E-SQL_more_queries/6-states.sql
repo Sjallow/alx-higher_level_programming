@@ -1,4 +1,4 @@
-tes a database
+-- creates a database
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 -- use a database
 USE hbtn_0d_usa;
