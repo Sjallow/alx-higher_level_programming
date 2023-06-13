@@ -2,5 +2,4 @@
 /* Author: sering*/
 class Rectangle {
 }
-
 module.exports = Rectangle;
