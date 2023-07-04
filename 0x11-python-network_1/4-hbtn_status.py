@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-"""A Python script that fetches https://alx-intranet.hbtn.io/status."""
+"""This script makes requests"""
 import requests
 
 
-if __name__ == "__main__":
+def get_request():
     req = requests.get("https://alx-intranet.hbtn.io/status")
     print("Body response:")
     print("\t- type: {}".format(type(req.text)))
-    print("\t- content: {}".format(req.text)):wq
+    print("\t- content: {}".format(req.text))
+
+
+if __name__ == "__main__":
+    get_request()
